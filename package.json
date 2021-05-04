@@ -1,0 +1,29 @@
+{
+  "name": "chss-service-auth",
+  "version": "0.0.1",
+  "description": "authentication service for CHSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon start.js",
+    "start": "node start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikilukasik/chss-service-auth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikilukasik/chss-service-auth/issues"
+  },
+  "homepage": "https://github.com/mikilukasik/chss-service-auth#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "mongodb": "^3.6.6"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.13.16"
+  }
+}
