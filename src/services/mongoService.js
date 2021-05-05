@@ -17,3 +17,10 @@ export const getCollection = async(collecitonName) => {
   collections[collecitonName] = db.collection(collecitonName);
   return collections[collecitonName];
 };
+
+export const getNextAvailableUserId = async() => {
+  const countersCollection = await getCollection('counters');
+  const response = await countersCollection.findOneAndUpdate({ _id: 'nextUserId' }, { $inc: { userId: 1 } }, { upsert: true });
+  if (response.lastErrorObject.upserted === 'nextUserId') return 0;
+  return response.value.userId;
+}
