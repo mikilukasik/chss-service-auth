@@ -26,3 +26,8 @@ export const getUser = async(filter) => {
   const usersCollection = await getCollection('users');
   return usersCollection.findOne(filter, { upsert: true });
 };
+
+export const updateUserData = async({ filter, update, options }) => {
+  const usersCollection = await getCollection('users');
+  return usersCollection.updateOne(filter, { $set: update }, options);
+};
